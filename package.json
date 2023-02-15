@@ -1,0 +1,25 @@
+{
+  "name": "finalcursoasincronismojs",
+  "version": "1.0.0",
+  "description": "trabajo aplicado para consolidar lo aprendido",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FedericoArias1992/FinalCursoAsincronismoJS.git"
+  },
+  "keywords": [
+    "API"
+  ],
+  "author": "FedericoArias",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FedericoArias1992/FinalCursoAsincronismoJS/issues"
+  },
+  "homepage": "https://github.com/FedericoArias1992/FinalCursoAsincronismoJS#readme",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}
