@@ -1,0 +1,123 @@
+:root { /*Escribirmos root para que su alcance (scope) sea global.*/
+    --black:#000000; /*Definimos una variable black con los dos guiones tal que referirse a esa variable Y de esa forma poderse reutilizar*/
+    --white: #FFFFFF; /*Se acceden mediante la función var()*/
+    --rojo:#AC3B61 ;
+    --azul:#022949;
+    --naranja:#F27D42;
+    --turquesa:#558DCA;
+    --celeste:#98FFF;
+    --cian: #C8EFF9;
+    --text-input-field: #F7F7F7;
+    --fuente: 'Montserrat';
+}
+
+body {
+    font-family: 'Montserrat'; /*Aplicamos el font del link de fonts.google al elemento Body*/
+    background-color: var(--azul);
+    }
+.principal {
+    width: 100%;
+    height: 20vh;
+    display: grid;
+    place-items: center start;
+    padding: 50px;
+}
+.textos {
+    font-size:100 px;
+    font-family: 'Source Sans Pro';
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px; 
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+.Nombre-Fede {
+    color: white;
+    font-size: 60px;
+}
+.Nombre-Git {
+    color: var(--cian);
+    font-size: 30px;
+}
+.short-description {
+    font-size: 20px;
+    color: var(--naranja);
+}
+.bg-white {
+    font-size: 30px;
+    color: var(--white);
+}
+#content {
+    display: grid;
+    position: absolute;
+    top: 500px;
+    right: 210px;
+    max-width: 500px;
+}
+.navbar {
+    display: flex; /*Esto es clave para que los elementos dentro de nav (logo, navbar-riht y navbar-left esten uno al lado del otro)*/
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 2px solid var(--celeste);
+    text-decoration: none; /*saca la linea de subrayado que viene por default*/
+    padding: 5;
+    align-items: center;
+    font-size: 44px;
+}
+.navbar-left a{
+    text-decoration: none; /*saca la linea de subrayado que viene por default*/
+    padding: 5;
+    color: var(--turquesa);
+    margin-top: 16px;
+    height: 60px; /*AUNQUE NO PAREZCA ESTE ES MUY IMPORTANTE-sin el en el responsive design se colapsan los elementos de la derecha*/
+}
+
+.navbar-left a:hover{ /*les ponemos el borde y el texto de otro color*/
+    border: 2px solid var(--naranja);
+    border-radius: 10px;
+    color: var(--turquesa);
+}
+
+.logo-lila {
+    width: 100px;
+}
+
+.perfil {
+    top: 70px;
+    right: 250px;
+    position: absolute;
+    width: 440px;
+    height: 380px;
+    border-radius: 65%;
+}
+.dot {
+    position: absolute;
+    right: 250px;
+    top: 42px;
+    height: 440px;
+    width: 440px;
+    background-color:var(--turquesa);
+    border-radius: 100%;
+    z-index: -1;
+    display: inline-block;
+  }
+.texto-contacto {
+    color: var(--white);
+}
+.some-random {
+    font-size: 20px;
+    font-style: oblique;
+    color: var(--white);
+}
+.group-relative h2{
+    color: var(--white);
+}
+.div-quote h2 {
+    position: absolute;
+    top: 466px;
+    right: 320px;
+}
+.div-bottom {
+    position: absolute;
+    bottom: 0px;
+}
