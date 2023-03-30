@@ -36,15 +36,11 @@ const content = null || document.getElementById('content');
 		//presentar los elementos en el HTML usando template strings
         
         let view = `
-			<div class="group relative">
-				<div
-					<h2 style= "font-style: italic; padding:35px; color:white;" alt="" class="w-full">${frases.content} - ${frases.originator.name}</h2>
-				</div>
+			<div class="group-frases">
+					<h2 class="api">${frases.content} - ${frases.originator.name}</h2>
 			</div>
-			<div class="group relative">
-				<div
-					<h2 style= "padding:35px; color:white; max-width:700px;" alt="" class="w-full">Partido Actual: ${bet[1].name} - Tiempo de Juego: - Odds:${Object.values(bet[1].odds)}</h2>
-				</div>
+			<div class="group-futbol">
+					<h2 class="api">Some random Match: ${bet[1].name} - Check the Odds:${Object.values(bet[1].odds)}</h2>
 			</div>
 		`
 		;

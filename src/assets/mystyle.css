@@ -15,6 +15,15 @@ body {
     font-family: 'Montserrat'; /*Aplicamos el font del link de fonts.google al elemento Body*/
     background-color: var(--azul);
     }
+.contenedor-ppal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;    
+}
+.contenedor-texto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 .principal {
     width: 100%;
     height: 20vh;
@@ -22,15 +31,11 @@ body {
     place-items: center start;
     padding: 50px;
 }
-.textos {
-    font-size:100 px;
-    font-family: 'Source Sans Pro';
-    grid-template-columns: 100px 50px 100px;
-    grid-template-rows: 80px auto 80px; 
-    column-gap: 10px;
-    row-gap: 15px;
+.descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
 }
-
 .Nombre-Fede {
     color: white;
     font-size: 60px;
@@ -43,17 +48,6 @@ body {
     font-size: 20px;
     color: var(--naranja);
 }
-.bg-white {
-    font-size: 30px;
-    color: var(--white);
-}
-#content {
-    display: grid;
-    position: absolute;
-    top: 500px;
-    right: 210px;
-    max-width: 500px;
-}
 .navbar {
     display: flex; /*Esto es clave para que los elementos dentro de nav (logo, navbar-riht y navbar-left esten uno al lado del otro)*/
     justify-content: space-between;
@@ -62,7 +56,7 @@ body {
     text-decoration: none; /*saca la linea de subrayado que viene por default*/
     padding: 5;
     align-items: center;
-    font-size: 44px;
+    font-size: 280%;
 }
 .navbar-left a{
     text-decoration: none; /*saca la linea de subrayado que viene por default*/
@@ -77,47 +71,204 @@ body {
     border-radius: 10px;
     color: var(--turquesa);
 }
-
 .logo-lila {
-    width: 100px;
+    width: 12%;
+    position: relative;
+    right: -80%;
 }
-
 .perfil {
     top: 70px;
-    right: 250px;
+    right: 17%;
     position: absolute;
-    width: 440px;
-    height: 380px;
+    width: 27%;
+    height: 50%;
     border-radius: 65%;
 }
 .dot {
     position: absolute;
-    right: 250px;
-    top: 42px;
-    height: 440px;
-    width: 440px;
-    background-color:var(--turquesa);
+    right: 16.5%;
+    top: 60px;
+    height: 53%;
+    width: 28%;
+    background-color:black;
     border-radius: 100%;
     z-index: -1;
     display: inline-block;
   }
-.texto-contacto {
-    color: var(--white);
+.frase {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;  
+}
+.contenedor-api {
+    display: grid;
+    grid-template-columns: 0.8fr;
+    grid-template-rows: 0.2fr 1fr;
+    max-width: 60%;
+    margin-top: -6%;  
 }
 .some-random {
-    font-size: 20px;
+    text-decoration: underline;
+    font-size: 120%;
     font-style: oblique;
     color: var(--white);
 }
 .group-relative h2{
     color: var(--white);
 }
-.div-quote h2 {
-    position: absolute;
-    top: 466px;
-    right: 320px;
+.api {
+    color: var(--white);
+    text-align: left;
+    width: 110%;
+    font-size: medium;
+}
+h4 {
+    color: var(--white);
+    text-align: center;
+    text-decoration: solid;
+    font-size: 120%;
+    font-weight: 900;
+    font-style: italic;
+}
+h3 {
+    color: var(--white);
+    text-align: center;
+    text-decoration: underline;
+    font-size: 100%;
+}
+.imagen-proyecto {
+    width: auto;
+    height: 360px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img-mail {
+    height: 20px;
+    width: auto;
+    position: relative;
+    bottom: -2px;
+    left: 50px;
 }
 .div-bottom {
-    position: absolute;
-    bottom: 0px;
+    display: grid;
 }
+.block {
+    text-decoration: none;
+    font-size: 200%;
+    color: var(--white);
+}
+@media (max-width: 600px) {
+    .perfil {
+        left: 160%;
+        width: 44%;
+        height: 20%;
+        border-radius: 65%;
+    }
+    .logo-lila {
+        display: none;
+    }
+    .dot {
+        display: none;
+    }
+    .contenedor-ppal {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;    
+    }
+        .contenedor-texto {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .descripcion {
+            display: flex;
+            flex-direction: column;
+            justify-content:space-evenly;
+        }
+        .Nombre-Fede {
+            color: white;
+            font-size: 60px;
+        }
+        .Nombre-Git {
+            color: var(--cian);
+            font-size: 30px;
+        }
+        .short-description {
+            font-size: 20px;
+            color: var(--naranja);
+        }
+        .navbar {
+            display: flex; /*Esto es clave para que los elementos dentro de nav (logo, navbar-riht y navbar-left esten uno al lado del otro)*/
+            justify-content: space-between;
+            padding: 0 20px;
+            border-bottom: 2px solid var(--celeste);
+            text-decoration: none; /*saca la linea de subrayado que viene por default*/
+            padding: 5;
+            align-items: center;
+            font-size: 280%;
+        }
+        .navbar-left a:hover{ /*les ponemos el borde y el texto de otro color*/
+            border: 2px solid var(--naranja);
+            border-radius: 10px;
+            color: var(--turquesa);
+        }
+        .frase {
+            display: grid;
+            grid-template-columns: 0.2fr 1fr;  
+        }
+        .contenedor-api {
+            display: grid;
+            grid-template-columns: 0.8fr;
+            grid-template-rows: 0.2fr 1fr;
+            max-width: 60%;
+            margin-top: -6%;  
+        }
+        .some-random {
+            text-decoration: underline;
+            font-size: 120%;
+            font-style: oblique;
+            color: var(--white);
+        }
+        .api {
+            color: var(--white);
+            text-align: left;
+            width: 110%;
+            font-size: medium;
+        }
+        h4 {
+            color: var(--white);
+            text-align: left;
+            text-decoration: solid;
+            font-size: 220%;
+            font-weight: 900;
+            font-style: italic;
+        }
+        h3 {
+            color: var(--white);
+            text-align: left;
+            text-decoration: underline;
+            font-size: 100%;
+            margin-left: 10%;
+        }
+        .imagen-proyecto {
+            width: auto;
+            height: 360px;
+            display: block;
+            margin-left: 4%;
+            margin-right: auto;
+        }
+        .img-mail {
+            height: 20px;
+            width: auto;
+            position: relative;
+            bottom: -2px;
+            left: 50px;
+        }
+        .div-bottom {
+            display: grid;
+        }
+        .block {
+            text-decoration: none;
+            font-size: 200%;
+            color: var(--white);
+        }
+    }
